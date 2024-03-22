@@ -1,0 +1,58 @@
+// positive sp value has been detected, the output may be wrong!
+void __cdecl __61_1_()
+{
+  if ( v85 != 1 )
+  {
+    v0 = StringLength
+    if ( v0 <= 0x20 )
+    {
+      v7 = *v6;
+      if ( (_BYTE)v7 != 'C' )                            		=> C
+        goto _BadChar; 	
+      if ( (_BYTE)v7 != 'T' )				 		=> T
+        goto _BadChar;					 
+      if ( (_BYTE)v7 != 'F' )				 		=> F
+        goto _BadChar;
+      v20 = v7 == 'l';					 		=> l
+      if ( !v20 )
+        goto _BadChar;
+      if ( v7 != 'e' )					 		=> e
+        goto _BadChar;
+      v20 = (v7 ^ 0xAB) == 202; 			 		=> a
+      if ( !v20 )
+        goto _BadChar;
+      if ( 0xBAADF00DLL * (unsigned __int8)v7 != 0x532174E5CALL ) 	=> r
+        goto _BadChar;
+      LOBYTE(v7) = 3;
+      v35 = *(unsigned __int8 *)(v32 + 7) / v7;
+      v36 = *(unsigned __int8 *)(v32 + 7) % v7;
+      if ( v35 != 36 || v36 != 2 ) 36 * 3 + 2 = 			=> n
+        goto _BadChar;
+      if ( (_BYTE)v7 != 123 ) => {
+        goto _BadChar;
+      if ( (_BYTE)v44 != '+' ) => '+'
+        goto _BadChar;
+      if ( ((unsigned __int8)v49 ^ 0xCB) != 0x8D ) => F
+        goto _BadChar;
+      if ( v54 != 114 ) => r
+        goto _BadChar
+      if ( v59 != 117 ) => u
+        goto _BadChar;
+      v63 = 0x15 * (unsigned __int128)*(unsigned __int8 *)(v60 + 13);
+      if ( (_QWORD)v63 != 2205LL )  => i
+        goto _BadChar;
+      if ( (unsigned __int8)v7 / 0x15uLL != 5 || *(unsigned __int8 *)(v64 + 14) % 0x15uLL != 11 ) =>  5 * 0x15 + 11 
+									=> t
+        goto _BadChar;
+      
+      if ( 2 * v70 != 98 ) 						=> 1
+        goto _BadChar;
+      
+      if ( (_BYTE)v7 != 50 ) 						=> 2
+        goto _BadChar;
+      if ( 16 * v77 != 816 ) 						=> 3
+        goto _BadChar;
+      if ( v81 != '}' )							=> }
+      {
+_BadChar:
+}
